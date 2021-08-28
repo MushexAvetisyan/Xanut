@@ -62,11 +62,6 @@ if($model->check_email($email)){
  header('location:registform.php');
  die;
 }
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
- $_SESSION['error'] = "<span class=mailsxal_err>*ՍԽԱԼ ՖՈՐՄԱՏԻ ԷԼ․ՀԱՍՑԵ</span>";
- header('location:registform.php'); 
- die;
-}
 
 if (!empty($login) && !empty($password) && !empty($confirm) && !empty($email)){
   $model->add_user($login,$password,$email,$confirm);

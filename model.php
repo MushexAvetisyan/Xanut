@@ -43,6 +43,7 @@ class model {
     }
     public function delete_from_cart($id){
         $query = "DELETE FROM `cart` WHERE id = $id";
+        $res=mysqli_query($this->conn,$query);
     }
 
 }

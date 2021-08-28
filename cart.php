@@ -7,7 +7,14 @@ $all = $model->get_selected_products($_SESSION['user_id']);
 
 
 if(empty ($all)){
-echo "<h1>your cart is empty</h1>";
+    echo "<p style=
+    text-align:center;color:white;font-size:55px;>
+    You Cant See Your Product Cart Because You Dont Loged <br>
+    You Redirect In Login Page After 5 Seconds 
+    </p>";
+    echo "<script>setTimeout(\"location.href = 'loginform.php';\",5000);</script>";
+
+
 die;
 }
 // print_r($all);
@@ -47,7 +54,7 @@ foreach($all as $val){
             <td  class='nkarimg'><img src = '$image'></td>
             <td  ><input type='number' value='$count' class='count' id='$id'></td>
             <td  class='sum'>$sum</td>
-            <td  class='delete'> <button id='$id'>DELETE</button></td>
+            <td > <button class='delete' id='$id'>DELETE</button></td>
         </tr>";
 }
  echo"<tr><td colspan=5>total</td><td>$total</td></tr>";
@@ -75,20 +82,21 @@ let count = $(this).val()
 
 
 
-$('.count').click(function(){
+$('.delete').click(function(){
 let id = $(this).attr('id')
-let count = $(this).val()
+// let count = $(this).val()
     
     $.ajax({
          url:'add_to_cart.php',
             type:'post',
-            data:{id:id, count:count, action: 'delete'},
+            data:{id:id, action: 'delete'},
             success:function(a){
-                
+                location.reload()
             }
         })
     });
 });
+
 </script>
 
 </table>
@@ -116,15 +124,16 @@ let count = $(this).val()
 }
 
     .nkarimg img{
-        width: 180px;
-        height: 150px;
+        width: 80px;
+        height: 80px;
         filter: grayscale(100%);
+        margin-top: 5px;
     }
 
     img:hover{
         filter: grayscale(0%);
         cursor: pointer;
-        transform: scale(1.1);
+        transform: scale(1.3);
     }
 
     .cart_table{
@@ -143,8 +152,8 @@ let count = $(this).val()
     }
 
     .cart_table td, .cart_table th{
-        padding-bottom: 2%;
-    padding-top: 2%;
+        padding-bottom: 0;
+    padding-top: 0;
     text-align: center;
     color: white;
     }
@@ -155,14 +164,7 @@ let count = $(this).val()
     .cart_table tr:nth-child(even) {
     background-color: #2C3446;
     }
-    /* .cart_table td:first-child { color: #FB667A; } */
 
-    .cart_table tr:hover {
-    /* background-color: #464A52; */
-        /* -webkit-box-shadow: 0 6px 6px -6px #0E1119; */
-        /* -moz-box-shadow: 0 6px 6px -6px #0E1119; */
-        /* box-shadow: 0 6px 6px -6px #0E1119; */
-    }
 
     .cart_table td:hover {
        
