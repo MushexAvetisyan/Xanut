@@ -6,16 +6,11 @@ include('model.php');
 $all = $model->get_selected_products($_SESSION['user_id']);
 
 
-if(empty ($all)){
-    echo "<p style=
-    text-align:center;color:white;font-size:55px;>
-    You Cant See Your Product Cart Because You Dont Loged <br>
-    You Redirect In Login Page After 5 Seconds 
-    </p>";
-    echo "<script>setTimeout(\"location.href = 'loginform.php';\",5000);</script>";
-
-
+if(!$all){
+   
+echo '<h2> Your Cart is Empty</h2>';
 die;
+
 }
 // print_r($all);
 
@@ -59,7 +54,8 @@ foreach($all as $val){
 }
  echo"<tr><td colspan=5>total</td><td>$total</td></tr>";
  $_SESSION['total']=$total;
- echo "</table>"
+ echo "</table>";
+ echo "<a href='buy.php'><button class='buy'>Buy</button></a>";
 ?>
 </table>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
