@@ -9,8 +9,8 @@
     </head>
     <body>
     <div class="login-box">
-        <h1>Welcome To My Online Shop</h1>
-        <h2>Login</h2>
+        <h1>Web Library Database</h1>
+        <h2>Admin</h2>
         <form action="login.php" method="post" class="login_form">
 
             <div class="user-box">
