@@ -21,7 +21,6 @@
   
   session_start();
   if(isset($_SESSION['user'])){
-
     echo '<li class="mailbox">'.$_SESSION['user'].'</li>';
     echo '<li><a href="cart.php">CART</a></li>';
     echo '<li><a href="logout.php" style="width:156px;">LOG OUT</a></li>';

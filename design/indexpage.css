@@ -1,3 +1,56 @@
+*{
+    margin: 0 auto;
+    padding: 0 auto;
+    box-sizing: border-box;
+}
+
+.main{
+    background-color: #131418;
+}
+
+.contain{
+    height: 60px;
+}
+
+.contain a{
+    float: left;
+}
+
+.contain i{
+    font-size: 70px;
+    padding: 20px 20px 20px 10px;
+    color: white;
+}
+
+.contain span{
+    position: relative;
+    top: 35px;
+    right: 10px;
+    font-size: 35px;
+    color: white;
+}
+
+.contain h1{
+    color: white;
+    font-size: 40px;
+    font-weight: 100;
+    position: absolute;
+    right: 75px;
+    margin-top: 30px;
+}
+
+
+@font-face {
+    font-family: 'Piece';
+    src: url('fonts/Pieces-of-Eight.ttf');
+}
+
+
+.tittle{
+    text-align: center;
+    font-family: 'Piece';
+}
+
 .container{
     text-align: left;
     overflow: hidden;
@@ -47,14 +100,6 @@
     transition-property: all;
     transition-timing-function: line;
   }
-
-
-
-.tittle{
-    /* text-align: center; */
-    font-weight: 600;
-    color: chartreuse;
-}
 
 a:visited{
     color: black;

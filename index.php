@@ -1,11 +1,8 @@
 <?php
 include('header.php');
 include('admin/model.php');
-
 $all = $model->get_categories();
 ?>
-
-
 
 
 <!DOCTYPE html>
@@ -16,38 +13,37 @@ $all = $model->get_categories();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="design/indexpage.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
-<body>
 
-
-<h1 class="tittle">Our Shop Store</h1>
+<body class="main">
+    <div class="contain">
+         <h1 class="tittle"> 
+            <cite>A book is a device that can ignite the imagination. - Alan Bennett</cite>
+        </h1>
+        <a href="index.php">
+            <i class="fas fa-code"></i>
+        </a>
+        <a href="index.php">
+            <span>BiGit Books</span>
+        </a>
+       
+    </div>
 <table class="container">
     <tr>
         <th>CATEGORY</th>
         <th>SHOW</th>
     </tr>
-<?php
-
-
-
-
-
-foreach($all as $val){
+<?php foreach($all as $val){
     $id = $val['id'];
     $name = $val['name'];
-
     echo"<tr id='$id'>";
     echo "<td class='name'>$name</td> 
-            
             <td><a href='products.php?cat=$id'> SHOW</a></td> 
         </tr>";
 }
-
 ?>
 
 </table>
-
-
-
 </body>
 </html>

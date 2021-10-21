@@ -18,9 +18,7 @@ if (!isset($_SESSION['admin'])) {
     <body>
         <div class="container">
             <span class="logo">
-                <a href="home.php">
-                    <img src="//images/logo.jpg" alt="" class="logo_image">
-                </a>
+                <a href="home.php"></a>
             </span>
             <a href="logout.php" class="logouting">LOG OUT</a>
             <p class="title_category"> SHOP STORES CATEGORIES</p>
