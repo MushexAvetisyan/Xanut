@@ -16,16 +16,16 @@ if (!isset($_SESSION['admin'])) {
     </head>
 
     <body>
+        <div class="header">
+         <a href="logout.php" class="logouting">LOG OUT</a>
+        </div>
+    
         <div class="container">
-            <span class="logo">
-                <a href="home.php"></a>
-            </span>
-            <a href="logout.php" class="logouting">LOG OUT</a>
-            <p class="title_category"> SHOP STORES CATEGORIES</p>
             <div class="adding">
                 <input type="text" name="" placeholder="SPORT WEAR" id="name">
                 <button id="add" class="btn-add">ADD</button>
             </div>
+            <p class="title_category">BOOK CATEGORIES</p>
         <table class="table" border="1">
             <thead>
                 <tr>
