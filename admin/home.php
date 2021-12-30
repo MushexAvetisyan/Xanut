@@ -18,14 +18,15 @@ if (!isset($_SESSION['admin'])) {
     <body>
         <div class="header">
          <a href="logout.php" class="logouting">LOG OUT</a>
+         
         </div>
     
         <div class="container">
             <div class="adding">
                 <input type="text" name="" placeholder="SPORT WEAR" id="name">
-                <button id="add" class="btn-add">ADD</button>
+                <button id="add" class="btn-add">Add New Book Category</button>
             </div>
-            <p class="title_category">BOOK CATEGORIES</p>
+            <p class="title_category">Books Categ</p>
         <table class="table" border="1">
             <thead>
                 <tr>

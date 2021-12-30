@@ -18,16 +18,12 @@ $all = $model->get_categories();
 
 <body class="main">
     <div class="contain">
-         <h1 class="tittle"> 
+        <a href="index.php">
+            <img src="images/logo.png" alt="">
+        </a>
+        <h1 class="tittle"> 
             <cite>A book is a device that can ignite the imagination. - Alan Bennett</cite>
         </h1>
-        <a href="index.php">
-            <i class="fas fa-code"></i>
-        </a>
-        <a href="index.php">
-            <span>BiGit Books</span>
-        </a>
-       
     </div>
 <table class="container">
     <tr>

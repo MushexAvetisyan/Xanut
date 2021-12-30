@@ -5,15 +5,20 @@
 }
 
 .main{
-    background-color: #131418;
+    background-color: black;
 }
 
 .contain{
-    height: 60px;
+    
 }
 
 .contain a{
     float: left;
+    width: 25%;
+}
+
+.contain img{
+    width: 100%;
 }
 
 .contain i{
@@ -35,8 +40,8 @@
     font-size: 40px;
     font-weight: 100;
     position: absolute;
-    right: 75px;
-    margin-top: 30px;
+    right: 10px;
+    margin-top: 0px;
 }
 
 
