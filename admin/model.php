@@ -4,7 +4,7 @@ class model{
 	public $conn;
 
 	public function __construct(){
-		$this->conn = mysqli_connect('localhost', 'root', "", 'xanut');
+		$this->conn = mysqli_connect('localhost', 'root', "root", 'xanut');
 }
 	public function __destruct(){
 		mysqli_close($this->conn);
